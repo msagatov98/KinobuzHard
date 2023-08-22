@@ -15,7 +15,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "SERVER_URL", "\"https://imdb-api.com/\""
+        buildConfigField "String", "SERVER_URL", "\"https://pokeapi.co/api/v2/\""
         buildConfigField "String", "API_KEY", "\"k_uafu9rmg\""
     }
 

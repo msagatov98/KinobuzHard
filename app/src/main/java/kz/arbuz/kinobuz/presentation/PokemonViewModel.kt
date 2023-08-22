@@ -5,21 +5,21 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kz.arbuz.kinobuz.data.entity.ApiMovie
-import kz.arbuz.kinobuz.domain.usecase.GetTop250MoviesUseCase
+import kz.arbuz.kinobuz.domain.entity.Pokemon
+import kz.arbuz.kinobuz.domain.usecase.GetPokemonListUseCase
 
-class MovieViewModel(
-    private val getTop250MoviesUseCase: GetTop250MoviesUseCase
+class PokemonViewModel(
+    private val getPokemonListUseCase: GetPokemonListUseCase
 ): ViewModel() {
 
-    private val _top250Movies = MutableLiveData<List<ApiMovie>>(emptyList())
-    val top250Movies: LiveData<List<ApiMovie>> = _top250Movies
+    private val _pokemons = MutableLiveData<List<Pokemon>>(emptyList())
+    val pokemons: LiveData<List<Pokemon>> = _pokemons
 
     fun dispatch(action: Action) {
         when (action) {
             Action.onCreated -> {
                 GlobalScope.launch {
-                    _top250Movies.value = getTop250MoviesUseCase.invoke()
+                    _pokemons.value = getPokemonListUseCase.invoke()
                 }
             }
         }

@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/layout_item_movie"
+        tools:listitem="@layout/layout_item_pokemon"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,20 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import kz.arbuz.kinobuz.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class TopMoviesFragment: Fragment(R.layout.fragment_top_movies) {
+class PokemonFragment: Fragment(R.layout.fragment_pokemons) {
 
-    private val moviesViewModel: MovieViewModel by viewModel()
+    private val pokemonViewModel: PokemonViewModel by viewModel()
 
     @SuppressLint("FragmentLiveDataObserve")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val recyclerView = view.findViewById<RecyclerView>(R.id.movie_list)
-        val adapter = MovieAdapter()
+        val adapter = PokemonAdapter()
         recyclerView.adapter = adapter
 
-
-        moviesViewModel.top250Movies.observe(this) {
+        pokemonViewModel.pokemons.observe(this) {
             adapter.items = it
             adapter.notifyDataSetChanged()
         }
