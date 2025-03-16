@@ -10,7 +10,9 @@ import coil.load
 import kz.arbuz.kinobuz.R
 import kz.arbuz.kinobuz.domain.entity.Pokemon
 
-class PokemonAdapter: RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
+class PokemonAdapter(
+    val fragment: PokemonFragment,
+): RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
 
     var items: List<Pokemon> = emptyList()
 
