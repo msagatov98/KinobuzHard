@@ -4,18 +4,18 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 34
 
     defaultConfig {
         applicationId "kz.arbuz.kinobuz"
         minSdk 21
-        targetSdk 31
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "SERVER_URL", "\"https://imdb-api.com/\""
+        buildConfigField "String", "SERVER_URL", "\"https://pokeapi.co/api/v2/\""
         buildConfigField "String", "API_KEY", "\"k_uafu9rmg\""
     }
 
